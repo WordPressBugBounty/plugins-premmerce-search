@@ -1,0 +1,127 @@
+ul.ui-autocomplete {
+    z-index: 9999;
+    list-style-type: none;
+}
+
+.pc-autocomplete--item {
+    display: block;
+    background-color: white;
+    border: 1px solid #f0f0f0;
+    border-top: 0;
+}
+
+.pc-autocomplete--item:hover {
+    background-color: #f2f2f2;
+    color: #868686;
+}
+
+.pc-autocomplete__product {
+    display: flex;
+    align-items: center;
+}
+
+.pc-autocomplete__product-photo {
+    width: 50px;
+    height: 40px;
+    padding: 5px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.pc-autocomplete__img {}
+
+.pc-autocomplete__product-info {
+    width: calc(100% - 60px);
+    padding: 5px 0;
+}
+
+.pc-autocomplete__product-title {
+    display: flex;
+    align-items: center;
+    padding: 0 10px 3px;
+    color: #6d6d6d;
+    cursor: pointer;
+    width: 100%;
+}
+
+.pc-autocomplete__product-price {
+    padding: 0 10px;
+}
+
+.pc-autocomplete__message {
+    text-align: center;
+    padding: 3px 5px;
+}
+
+.pc-autocomplete__message--show-all {}
+
+.premmerce-search-spinner {
+    z-index: 9999999999;
+    content: '';
+    position: absolute;
+    opacity: 0.6;
+
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #484848;
+    border-radius: 50%;
+
+    animation: premmerce-search-spin 0.5s linear infinite;
+}
+
+.pc-autocomplete a.item-link {
+    z-index: 1;
+}
+
+.pc-autocomplete .pc-autocomplete__product-btn {
+    position: relative;
+}
+
+.pc-autocomplete .pc-autocomplete__product-btn a.product-add-to-cart {
+    display: block;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    z-index: 10;
+}
+
+.pc-autocomplete .pc-autocomplete__product-btn a.product-add-to-cart:hover {
+    background: rgba(0,0,0,0.3);
+}
+
+.pc-autocomplete .pc-autocomplete__product-btn a.product-add-to-cart svg {}
+
+@keyframes premmerce-search-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Jq ui Autocomplete css
+----------------------------------*/
+
+.ui-autocomplete { position: absolute; cursor: default; }
+
+.ui-helper-hidden-accessible{
+    border:0;
+    clip:rect(0 0 0 0);
+    height:1px;
+    margin:-1px;
+    overflow:hidden;
+    padding:0;
+    position:absolute;
+    width:1px
+}

@@ -1,0 +1,175 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Premmerce Search\n"
+"POT-Creation-Date: 2021-08-13 16:09+0300\n"
+"PO-Revision-Date: 2021-08-13 16:09+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_attr__;esc_attr_e;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: freemius\n"
+"X-Poedit-SearchPathExcluded-1: build\n"
+
+#: src/Admin/Admin.php:89 src/Admin/Admin.php:90
+msgid "Search settings"
+msgstr "Paramètres de recherche"
+
+#: src/Admin/Admin.php:116
+msgid "Settings"
+msgstr "Paramètres"
+
+#: src/Admin/Admin.php:117
+msgid "Affiliate"
+msgstr ""
+
+#: src/Admin/Admin.php:122
+msgid "Account"
+msgstr "Compte"
+
+#: src/Admin/Admin.php:124
+msgid "Contact Us"
+msgstr "Nous contacter"
+
+#: src/Admin/Admin.php:147
+msgid "Search field selector"
+msgstr "Sélecteur de champ de recherche"
+
+#: src/Admin/Admin.php:153
+msgid "CSS Selector of custom search field"
+msgstr "Sélecteur CSS du champ de recherche personnalisé"
+
+#: src/Admin/Admin.php:161
+msgid "Force product search"
+msgstr "Forcer la recherche de produits"
+
+#: src/Admin/Admin.php:167
+msgid "Search for products only"
+msgstr "Recherche de produits uniquement"
+
+#: src/Admin/Admin.php:174
+msgid "Shortcode for display form"
+msgstr "Shortcode pour l'affichage du formulaire de recherche"
+
+#: src/Admin/Admin.php:192
+msgid "Minimum symbols to start a live search"
+msgstr "Symboles minimums pour lancer une recherche en direct"
+
+#: src/Admin/Admin.php:208
+msgid "The number of live search (autocomplete) results"
+msgstr "Le nombre de résultats de recherche en direct (autocomplétion)"
+
+#: src/Admin/Admin.php:224
+msgid "Additional fields for search"
+msgstr "Champs supplémentaires pour la recherche"
+
+#: src/Admin/Admin.php:240
+msgid "Out of stock visibility"
+msgstr "Visibilité en rupture de stock"
+
+#: src/Admin/Admin.php:251
+msgid "Template text"
+msgstr "Texte du modèle"
+
+#: src/Admin/Admin.php:263
+msgid "Additional fields for autocomplete"
+msgstr "Champs supplémentaires pour l'autocomplétion"
+
+#: src/Admin/Admin.php:279
+msgid "Custom CSS"
+msgstr "CSS personnalisé"
+
+#: src/Admin/Admin.php:462
+#, php-format
+msgid ""
+"Please rate our Premmerce Product Search for WooCommerce on <a href=\"%1$s\" "
+"%2$s>WordPress.org</a><br/>Thank you from the Premmerce team!"
+msgstr ""
+
+#: src/Frontend/RestController.php:85
+#: views/frontend/autocomplete-template.php:43
+msgid "All search results"
+msgstr "Tous les résultats de recherche"
+
+#: src/SearchPlugin.php:144
+#, php-format
+msgid "The %s plugin requires %s plugin to be active!"
+msgstr "Le plugin %s nécessite que le plugin %s soit actif !"
+
+#: views/admin/fields/autocomplete-checkboxes.php:11
+msgid "Show products image"
+msgstr "Afficher l'image des produits"
+
+#: views/admin/fields/autocomplete-checkboxes.php:18
+msgid "Show products price"
+msgstr "Afficher le prix des produits"
+
+#: views/admin/fields/autocomplete-checkboxes.php:25
+msgid "Show products add to cart button"
+msgstr "Afficher le bouton \"Ajouter au panier\" des produits"
+
+#: views/admin/fields/custom-css.php:6
+msgid "Add your CSS rules here"
+msgstr "Ajoutez vos règles CSS ici"
+
+#: views/admin/fields/out-of-stock-visibility.php:10
+msgid "Hide out of stock items from search"
+msgstr "Masquer les articles en rupture de stock dans la recherche"
+
+#: views/admin/fields/product-searchform.php:6
+msgid "Replace input placeholder text from search form"
+msgstr "Remplacer le texte de l'espace de saisie du formulaire de recherche"
+
+#: views/admin/fields/product-searchform.php:11
+msgid "Replace button text from search form"
+msgstr "Remplacer le texte du bouton du formulaire de recherche"
+
+#: views/admin/fields/where-to-search-checkboxes.php:12
+msgid "Products SKU"
+msgstr "Produits SKU"
+
+#: views/admin/fields/where-to-search-checkboxes.php:19
+msgid "Short description"
+msgstr "Brève description"
+
+#: views/admin/fields/where-to-search-checkboxes.php:26
+msgid "Products tags"
+msgstr "Balises de produits"
+
+#: views/admin/fields/where-to-search-checkboxes.php:33
+msgid "Products categories"
+msgstr "Catégories de produits"
+
+#: views/admin/main.php:4
+msgid "Premmerce Search"
+msgstr "Recherche de prémices"
+
+#: views/admin/main.php:19
+msgid "Upgrate to Premium"
+msgstr ""
+
+#: views/admin/tabs/settings.php:17
+msgid "Update indexes"
+msgstr "Mise à jour des index"
+
+#: views/admin/tabs/settings.php:20
+msgid ""
+"We recommend that you update the indexes after the products have been changed"
+msgstr ""
+"Nous vous recommandons de mettre à jour les index après que les produits "
+"aient été modifies"
+
+#: views/frontend/product-searchform.php:12
+msgid "Search products&hellip;"
+msgstr "Rechercher des produits&hellip ;"
+
+#: views/frontend/product-searchform.php:18
+msgid "Search for:"
+msgstr "Recherchez :"

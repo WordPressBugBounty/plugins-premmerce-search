@@ -1,0 +1,196 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Premmerce search\n"
+"POT-Creation-Date: 2021-08-13 16:08+0300\n"
+"PO-Revision-Date: 2021-08-13 16:08+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_attr_e;esc_html__;esc_attr__\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: src/Admin/Admin.php:89 src/Admin/Admin.php:90
+msgid "Search settings"
+msgstr "Налаштування пошуку"
+
+#: src/Admin/Admin.php:116
+msgid "Settings"
+msgstr "Налаштування"
+
+#: src/Admin/Admin.php:117
+msgid "Affiliate"
+msgstr ""
+
+#: src/Admin/Admin.php:122
+msgid "Account"
+msgstr "Аккаунт"
+
+#: src/Admin/Admin.php:124
+msgid "Contact Us"
+msgstr "Зв'яжіться з нами"
+
+#: src/Admin/Admin.php:147
+msgid "Search field selector"
+msgstr "Селектор поля пошуку"
+
+#: src/Admin/Admin.php:153
+msgid "CSS Selector of custom search field"
+msgstr "CSS Селектор для поля пошуку"
+
+#: src/Admin/Admin.php:161
+msgid "Force product search"
+msgstr "Примусовий пошук товарів"
+
+#: src/Admin/Admin.php:167
+msgid "Search for products only"
+msgstr "Шукати тільки товари"
+
+#: src/Admin/Admin.php:174
+msgid "Shortcode for display form"
+msgstr ""
+
+#: src/Admin/Admin.php:192
+msgid "Minimum symbols to start a live search"
+msgstr "Мінімальна кількість символів для початку живого пошуку"
+
+#: src/Admin/Admin.php:208
+msgid "The number of live search (autocomplete) results"
+msgstr "Кількість результатів живого пошуку (автозаповнення)"
+
+#: src/Admin/Admin.php:224
+msgid "Additional fields for search"
+msgstr "Додаткові поля для пошуку"
+
+#: src/Admin/Admin.php:240
+msgid "Out of stock visibility"
+msgstr ""
+
+#: src/Admin/Admin.php:251
+msgid "Template text"
+msgstr ""
+
+#: src/Admin/Admin.php:263
+#, fuzzy
+#| msgid "Additional fields for search"
+msgid "Additional fields for autocomplete"
+msgstr "Додаткові поля для пошуку"
+
+#: src/Admin/Admin.php:279
+msgid "Custom CSS"
+msgstr ""
+
+#: src/Admin/Admin.php:462
+#, php-format
+msgid ""
+"Please rate our Premmerce Product Search for WooCommerce on <a href=\"%1$s\" "
+"%2$s>WordPress.org</a><br/>Thank you from the Premmerce team!"
+msgstr ""
+
+#: src/Frontend/RestController.php:85
+#: views/frontend/autocomplete-template.php:43
+msgid "All search results"
+msgstr "Всі результати пошуку"
+
+#: src/SearchPlugin.php:144
+#, php-format
+msgid "The %s plugin requires %s plugin to be active!"
+msgstr "Для роботи плагіна %s потрібен плагін %s"
+
+#: views/admin/fields/autocomplete-checkboxes.php:11
+#, fuzzy
+#| msgid "Search for products only"
+msgid "Show products image"
+msgstr "Шукати тільки товари"
+
+#: views/admin/fields/autocomplete-checkboxes.php:18
+#, fuzzy
+#| msgid "Force product search"
+msgid "Show products price"
+msgstr "Примусовий пошук товарів"
+
+#: views/admin/fields/autocomplete-checkboxes.php:25
+msgid "Show products add to cart button"
+msgstr ""
+
+#: views/admin/fields/custom-css.php:6
+msgid "Add your CSS rules here"
+msgstr ""
+
+#: views/admin/fields/out-of-stock-visibility.php:10
+msgid "Hide out of stock items from search"
+msgstr ""
+
+#: views/admin/fields/product-searchform.php:6
+msgid "Replace input placeholder text from search form"
+msgstr ""
+
+#: views/admin/fields/product-searchform.php:11
+msgid "Replace button text from search form"
+msgstr ""
+
+#: views/admin/fields/where-to-search-checkboxes.php:12
+msgid "Products SKU"
+msgstr "Артикул товару"
+
+#: views/admin/fields/where-to-search-checkboxes.php:19
+msgid "Short description"
+msgstr "Короткий опис"
+
+#: views/admin/fields/where-to-search-checkboxes.php:26
+#, fuzzy
+#| msgid "Products SKU"
+msgid "Products tags"
+msgstr "Артикул товару"
+
+#: views/admin/fields/where-to-search-checkboxes.php:33
+msgid "Products categories"
+msgstr ""
+
+#: views/admin/main.php:4
+msgid "Premmerce Search"
+msgstr "Premmerce Search"
+
+#: views/admin/main.php:19
+msgid "Upgrate to Premium"
+msgstr ""
+
+#: views/admin/tabs/settings.php:17
+msgid "Update indexes"
+msgstr "Оновити індекси"
+
+#: views/admin/tabs/settings.php:20
+msgid ""
+"We recommend that you update the indexes after the products have been changed"
+msgstr "Рекомендуємо оновлювати індекси після внесення змін до товарів"
+
+#: views/frontend/product-searchform.php:12
+#, fuzzy
+#| msgid "Search for products only"
+msgid "Search products&hellip;"
+msgstr "Шукати тільки товари"
+
+#: views/frontend/product-searchform.php:18
+#, fuzzy
+#| msgid "Search field selector"
+msgid "Search for:"
+msgstr "Селектор поля пошуку"
+
+#~ msgid "Pricing"
+#~ msgstr "Ціни"
+
+#~ msgid "The allowable number of mistakes in a word for a live search"
+#~ msgstr "Допустима кількість помилок у слові для живого пошуку"
+
+#~ msgid "The number of live search(autocomplete) results"
+#~ msgstr "Кількість результатів живого пошуку(автозаповнення)"
+
+#~ msgid "This plugin requires %s plugin to be active!"
+#~ msgstr "Для цього плагіна вам необхідний плагін %s!"

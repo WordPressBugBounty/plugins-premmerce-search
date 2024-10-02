@@ -1,0 +1,29 @@
+.form-field.premmerce-search-settings{
+    width: 80px;
+}
+
+p.shortcode {
+    font-weight: bold;
+    color: #23282d;
+    margin-top: 0;
+}
+
+.premmerce-upgrate-to-premium-button {
+    background-color: #2271b1;
+    border-color: #2271b1;
+    color: #ffffff;
+    float: right;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.premmerce-upgrate-to-premium-button:hover,
+.premmerce-upgrate-to-premium-button:active,
+.premmerce-upgrate-to-premium-button:focus {
+    background-color: #2271b1;
+    border-color: #2271b1;
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.8;
+
+}
