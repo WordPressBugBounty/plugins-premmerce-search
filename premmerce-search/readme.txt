@@ -2,7 +2,7 @@
 Contributors: premmerce, freemius
 Tags: product search, WooCommerce product search, live product search, ajax product search
 Requires at least: 4.8
-Tested up to: 6.6
+Tested up to: 6.7
 Stable tag: 2.2.4
 Requires PHP: 5.6
 License: GPLv2 or later
