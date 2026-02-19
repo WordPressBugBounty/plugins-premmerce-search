@@ -4,7 +4,9 @@ class OceanWpIntegration
 {
     public function __construct()
     {
+
         add_filter('premmerce_search_localize_array', function ($localizeData) {
+
             if ($localizeData['searchField'] != '') {
                 $localizeData['searchField'] = '.header-searchform input ,' . $localizeData['searchField'];
             } else {
@@ -13,5 +15,6 @@ class OceanWpIntegration
 
             return $localizeData;
         });
+
     }
 }

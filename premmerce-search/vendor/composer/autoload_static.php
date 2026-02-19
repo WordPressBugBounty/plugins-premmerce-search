@@ -4,30 +4,30 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticIniteef174f3367de91623daa0766eb20321
+class ComposerStaticInit336b6e158d7b844117362c2ae72b0816
 {
     public static $prefixLengthsPsr4 = array (
-        'P' => 
+        'P' =>
         array (
             'Premmerce\\Search\\' => 17,
             'Premmerce\\SDK\\' => 14,
         ),
-        'B' => 
+        'B' =>
         array (
             'Behat\\Transliterator\\' => 21,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Premmerce\\Search\\' => 
+        'Premmerce\\Search\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
-        'Premmerce\\SDK\\' => 
+        'Premmerce\\SDK\\' =>
         array (
             0 => __DIR__ . '/..' . '/premmerce/wordpress-sdk/src',
         ),
-        'Behat\\Transliterator\\' => 
+        'Behat\\Transliterator\\' =>
         array (
             0 => __DIR__ . '/..' . '/behat/transliterator/src/Behat/Transliterator',
         ),
@@ -40,9 +40,9 @@ class ComposerStaticIniteef174f3367de91623daa0766eb20321
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticIniteef174f3367de91623daa0766eb20321::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticIniteef174f3367de91623daa0766eb20321::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticIniteef174f3367de91623daa0766eb20321::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit336b6e158d7b844117362c2ae72b0816::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit336b6e158d7b844117362c2ae72b0816::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit336b6e158d7b844117362c2ae72b0816::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -7,6 +7,7 @@ use Premmerce\Search\Model\Word;
 use Premmerce\SDK\V2\FileManager\FileManager;
 use Premmerce\SDK\V2\Notifications\AdminNotifier;
 use Premmerce\SDK\V2\Plugin\PluginInterface;
+use \Automattic\WooCommerce\Utilities\FeaturesUtil;
 
 /**
  * Class SearchPlugin
@@ -70,8 +71,20 @@ class SearchPlugin implements PluginInterface
         add_action('init', array($this, 'loadTextDomain'));
         add_action('init', array($this, 'registerShortcode'));
         add_action('admin_init', array($this, 'checkRequirePlugins'));
+        add_action('before_woocommerce_init', array($this, 'declareHposCompatibility'));
 
         premmerce_ps_fs()->add_filter('freemius_pricing_js_path', array($this, 'cutomFreemiusPricingPage'));
+    }
+
+    /**
+     * Declares compatibility with WooCommerce HPOS (High-Performance Order Storage).
+     */
+    public function declareHposCompatibility()
+    {
+        if (class_exists(FeaturesUtil::class)) {
+            $mainFile = $this->fileManager->getMainFile();
+            FeaturesUtil::declare_compatibility('custom_order_tables', $mainFile, true);
+        }
     }
 
     /**
@@ -98,6 +111,7 @@ class SearchPlugin implements PluginInterface
             new SearchHandler($this->word, $this->wordProcessor, $this->fileManager);
             new RestController($this->fileManager);
         }
+
     }
 
     /**
@@ -119,6 +133,7 @@ class SearchPlugin implements PluginInterface
         foreach (self::OPTIONS as $optionName) {
             delete_option($optionName);
         }
+
     }
 
     /**
@@ -129,6 +144,7 @@ class SearchPlugin implements PluginInterface
         add_shortcode('premmerce_search', function ($atts = array(), $content = null) {
             return get_product_search_form(false);
         });
+
     }
 
     /**
@@ -155,6 +171,7 @@ class SearchPlugin implements PluginInterface
      */
     private function validateRequiredPlugins()
     {
+
         $plugins = array();
 
         if (! function_exists('is_plugin_active')) {

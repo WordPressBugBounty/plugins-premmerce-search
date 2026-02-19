@@ -9,8 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 $data        = get_option( SearchPlugin::OPTIONS['templateRewrite'] );
-$placeholder = ! empty( $data['placeholderText'] ) ? $data['placeholderText'] : esc_attr__( 'Search products&hellip;', 'woocommerce' );
-$button      = ! empty( $data['buttonText'] ) ? $data['buttonText'] : esc_html_x( 'Search', 'submit button', 'woocommerce' );
+$placeholder = ! empty( $data['placeholderText'] ) ? esc_attr( $data['placeholderText'] ) : esc_attr__( 'Search products&hellip;', 'woocommerce' );
+$button      = ! empty( $data['buttonText'] ) ? esc_html( $data['buttonText'] ) : esc_html_x( 'Search', 'submit button', 'woocommerce' );
 
 
 ?>

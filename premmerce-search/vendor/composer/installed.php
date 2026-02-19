@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'premmerce/product-search',
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
-        'reference' => 'e98a7354694a0015566812a36df6b81214d7036d',
+        'pretty_version' => '2.2.5',
+        'version' => '2.2.5.0',
+        'reference' => 'dfee346b46e71381a8aa315a5058ed1d6524e08e',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -20,9 +20,9 @@
             'dev_requirement' => false,
         ),
         'premmerce/product-search' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
-            'reference' => 'e98a7354694a0015566812a36df6b81214d7036d',
+            'pretty_version' => '2.2.5',
+            'version' => '2.2.5.0',
+            'reference' => 'dfee346b46e71381a8aa315a5058ed1d6524e08e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

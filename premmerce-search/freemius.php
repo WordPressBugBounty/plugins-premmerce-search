@@ -1,10 +1,8 @@
 <?php
 
 // Create a helper function for easy SDK access.
-function premmerce_ps_fs()
-{
-    global  $premmerce_ps_fs ;
-    
+function premmerce_ps_fs() {
+    global $premmerce_ps_fs;
     if ( !isset( $premmerce_ps_fs ) ) {
         // Include Freemius SDK.
         require_once dirname( __FILE__ ) . '/freemius/start.php';
@@ -17,23 +15,22 @@ function premmerce_ps_fs()
             'has_addons'      => false,
             'has_paid_plans'  => true,
             'trial'           => array(
-            'days'               => 7,
-            'is_require_payment' => true,
-        ),
+                'days'               => 7,
+                'is_require_payment' => true,
+            ),
             'has_affiliation' => 'all',
             'menu'            => array(
-            'slug'    => 'premmerce-search-admin',
-            'support' => false,
-            'contact' => false,
-            'account' => false,
-            'parent'  => array(
-            'slug' => 'premmerce',
-        ),
-        ),
+                'slug'    => 'premmerce-search-admin',
+                'support' => false,
+                'contact' => false,
+                'account' => false,
+                'parent'  => array(
+                    'slug' => 'premmerce',
+                ),
+            ),
             'is_live'         => true,
         ) );
     }
-    
     return $premmerce_ps_fs;
 }
 

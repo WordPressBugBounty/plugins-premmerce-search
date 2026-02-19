@@ -2,61 +2,66 @@
 
 namespace Premmerce\Search\Frontend;
 
-use  Premmerce\SDK\V2\FileManager\FileManager ;
-use  Premmerce\Search\SearchPlugin ;
-use  WP_Query ;
-use  WP_REST_Request ;
-use  WP_REST_Response ;
-use  WP_REST_Server ;
-class RestController
-{
+use Premmerce\SDK\V2\FileManager\FileManager;
+use Premmerce\Search\SearchPlugin;
+use WP_Query;
+use WP_REST_Request;
+use WP_REST_Response;
+use WP_REST_Server;
+class RestController {
     /**
      * @var string
      */
-    private  $searchPath ;
+    private $searchPath;
+
     /**
      * @var string
      */
-    private  $namespace = 'premmerce-search/v1' ;
+    private $namespace = 'premmerce-search/v1';
+
     /**
      * @var string
      */
-    private  $route = '/search' ;
+    private $route = '/search';
+
     /**
      * @var FileManager
      */
-    private  $fileManager ;
+    private $fileManager;
+
     /**
      * @var int
      */
-    private  $maxResultsNum = 6 ;
+    private $maxResultsNum = 6;
+
     /**
      * @var int
      */
-    private  $minToSearch = 3 ;
+    private $minToSearch = 3;
+
     /**
      * @var array
      */
-    private  $outOfStockVisibility = array() ;
+    private $outOfStockVisibility = array();
+
     /**
      * RestController constructor.
      *
      * @param FileManager $fileManager
      */
-    public function __construct( FileManager $fileManager )
-    {
+    public function __construct( FileManager $fileManager ) {
         $this->fileManager = $fileManager;
         $this->searchPath = $this->namespace . $this->route;
         #/premmerce_clear
         add_action( 'rest_api_init', function () {
             register_rest_route( $this->namespace, $this->route, array(
                 'methods'             => WP_REST_Server::READABLE,
-                'callback'            => array( $this, 'search' ),
+                'callback'            => array($this, 'search'),
                 'permission_callback' => '__return_true',
             ) );
         } );
-        add_action( 'wp_enqueue_scripts', function () use( $fileManager ) {
-            wp_enqueue_script( 'premmerce_search', $fileManager->locateAsset( 'frontend/js/autocomplete.js' ), array( 'jquery', 'jquery-ui-autocomplete' ) );
+        add_action( 'wp_enqueue_scripts', function () use($fileManager) {
+            wp_enqueue_script( 'premmerce_search', $fileManager->locateAsset( 'frontend/js/autocomplete.js' ), array('jquery', 'jquery-ui-autocomplete') );
             $localize_array = apply_filters( 'premmerce_search_localize_array', array(
                 'url'                => esc_url_raw( apply_filters( 'wpml_permalink', rest_url( $this->searchPath ) ) ),
                 'minLength'          => $this->minToSearch,
@@ -70,7 +75,7 @@ class RestController
             wp_add_inline_style( 'premmerce_search_css', get_option( SearchPlugin::OPTIONS['customCss'] ) );
         } );
     }
-    
+
     /**
      * Returns json items by term
      *
@@ -78,32 +83,29 @@ class RestController
      *
      * @return WP_REST_Response
      */
-    public function search( WP_REST_Request $request )
-    {
+    public function search( WP_REST_Request $request ) {
         $term = mb_strtolower( $request->get_param( 'term' ) );
         $suggestions = array();
         $productVisibilityTerms = wc_get_product_visibility_term_ids();
         $productVisibilityNotIn[] = $productVisibilityTerms['exclude-from-search'];
         // Hide out of stock products.
-        
         if ( isset( $this->outOfStockVisibility['outOfStock'] ) && $this->outOfStockVisibility['outOfStock'] ) {
             $productVisibilityNotIn[] = $productVisibilityTerms['outofstock'];
         } elseif ( 'yes' === get_option( 'woocommerce_hide_out_of_stock_items' ) ) {
             $productVisibilityNotIn[] = $productVisibilityTerms['outofstock'];
         }
-        
         $args = array(
             'post_type'      => 'product',
             'posts_per_page' => $this->maxResultsNum,
             's'              => $term,
-            'tax_query'      => array( array(
-            'taxonomy' => 'product_visibility',
-            'field'    => 'term_taxonomy_id',
-            'terms'    => $productVisibilityNotIn,
-            'operator' => 'NOT IN',
-        ) ),
+            'tax_query'      => array(array(
+                'taxonomy' => 'product_visibility',
+                'field'    => 'term_taxonomy_id',
+                'terms'    => $productVisibilityNotIn,
+                'operator' => 'NOT IN',
+            )),
         );
-        $loop = new WP_Query( $args );
+        $loop = new WP_Query($args);
         while ( $loop->have_posts() ) {
             $loop->the_post();
             $id = get_the_ID();
@@ -117,7 +119,7 @@ class RestController
             $suggestion['isPurchasable'] = $product->is_purchasable() && !$product->is_type( 'variable' );
             $suggestions[] = $suggestion;
         }
-        return new WP_REST_Response( $suggestions, 200 );
+        return new WP_REST_Response($suggestions, 200);
     }
 
 }

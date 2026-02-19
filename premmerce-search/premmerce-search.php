@@ -9,7 +9,7 @@ use Premmerce\Search\SearchPlugin;
  * Plugin Name:       Premmerce Product Search for WooCommerce
  * Plugin URI:        https://premmerce.com/woocommerce-product-search/
  * Description:       Premmerce Search makes the WooCommerce product search more flexible and efficient and gives the additional search results due to the spell correction.
- * Version:           2.2.4
+ * Version:           2.2.5
  * Author:            Premmerce
  * Author URI:        https://premmerce.com
  * License:           GPL-2.0+
@@ -18,7 +18,7 @@ use Premmerce\Search\SearchPlugin;
  * Domain Path:       /languages
  *
  * WC requires at least: 3.0.0
- * WC tested up to: 7.3.0
+ * WC tested up to: 6.2
  *
  */
 

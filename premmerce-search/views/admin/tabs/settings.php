@@ -14,7 +14,7 @@ if(!defined('WPINC')) die; ?>
 <?php submit_button('','primary', 'submit', true, ['form' => 'premmerce_search_options_form']); ?>
 
 <form method="post">
-
+    <?php wp_nonce_field( 'premmerce_search_update_indexes' ); ?>
     <?php submit_button(__('Update indexes', 'premmerce-search'), 'secondary', SearchPlugin::DOMAIN . '-update-indexes', true, ['value' => '1'] ); ?>
 
 </form>

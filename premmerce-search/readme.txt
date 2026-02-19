@@ -3,7 +3,7 @@ Contributors: premmerce, freemius
 Tags: product search, WooCommerce product search, live product search, ajax product search
 Requires at least: 4.8
 Tested up to: 6.9
-Stable tag: 2.2.4
+Stable tag: 2.2.5
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -107,8 +107,14 @@ For example if you are using Ocean WP theme, you can add #s selector to make liv
 
 Please report security bugs found in the source code of this plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/premmerce-search/). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
 
-
 == Changelog ==
+
+= 2.2.5 (19th Feb 2026) =
+
+* Security Fix: Local File Inclusion via tab parameter
+* Security Fix: Cross-Site Request Forgery on update indexes action
+* Security Fix: Stored XSS in settings page via placeholder and button text
+* Fix: WooCommerce HPOS compatibility
 
 = 2.2.4 (20th July 2023) =
 

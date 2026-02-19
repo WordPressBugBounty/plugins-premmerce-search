@@ -81,6 +81,7 @@ class WordProcessor
 
         foreach ($words as $actualWord) {
             if (mb_strlen($actualWord) > 2) {
+
                 if (is_numeric($actualWord)) {
                     array_push($numeric, $actualWord);
                 } else {
@@ -104,6 +105,7 @@ class WordProcessor
                     $words[] = $word;
                 }
             }
+
         }
 
         $words = array_unique($words);

@@ -6,10 +6,10 @@
         <?php foreach($tabs as $tab => $name): ?>
         <?php
                 $class = ($tab == $current)? ' nav-tab-active' : '';
-                $link = ('affiliate' == $tab) ? '?page=premmerce-search-admin-affiliation' : '?page=premmerce-search-admin&tab=' . $tab;
+                $link = ('affiliate' == $tab) ? '?page=premmerce-search-admin-affiliation' : '?page=premmerce-search-admin&tab=' . esc_attr($tab);
             ?>
-        <a class='nav-tab<?php echo $class; ?>' href='<?php echo $link; ?>'>
-            <?php echo $name; ?>
+        <a class='nav-tab<?php echo esc_attr($class); ?>' href='<?php echo esc_url($link); ?>'>
+            <?php echo esc_html($name); ?>
         </a>
         <?php endforeach; ?>
 
